@@ -19,7 +19,7 @@
 
 ##Technology Used:
 
- **Backend:** Python , Django
+ **Backend:** Django
 
  **Database:** Postgresql
 
