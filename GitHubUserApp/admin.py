@@ -1,9 +1,9 @@
 from django.contrib import admin
+from django.db.models import Count
 
 from GitHubUserApp.models import *
 
 # Register your models here.
-
 
 class AdminGitHubUser(admin.ModelAdmin):
 

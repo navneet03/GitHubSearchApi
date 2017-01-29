@@ -21,6 +21,21 @@ class DbService(object):
                 model_obj.score = user_data["score"]
                 model_obj.url = user_data["url"]
 
+                if str(user_data["site_admin"]) == "false":
+                    model_obj.site_admin = False
+                else:
+                    model_obj.site_admin = True
+                model_obj.html_url = user_data["html_url"]
+                model_obj.followers_url = user_data["followers_url"]
+                model_obj.following_url = user_data["following_url"]
+                model_obj.gists_url = user_data["gists_url"]
+                model_obj.starred_url = user_data["starred_url"]
+                model_obj.subscriptions_url = user_data["subscriptions_url"]
+                model_obj.organizations_url = user_data["organizations_url"]
+                model_obj.repos_url = user_data["repos_url"]
+                model_obj.events_url = user_data["events_url"]
+                model_obj.received_events_url = user_data["received_events_url"]
+
                 user_profile_info = git_api_service.get_user_profile_info(user_data["url"])
 
                 if user_profile_info == "failure":
